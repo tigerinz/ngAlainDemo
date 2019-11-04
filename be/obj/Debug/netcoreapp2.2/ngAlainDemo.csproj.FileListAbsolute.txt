@@ -1,0 +1,14 @@
+D:\Angular\github\ngAlain\be\bin\Debug\netcoreapp2.2\ngAlainDemo.deps.json
+D:\Angular\github\ngAlain\be\bin\Debug\netcoreapp2.2\ngAlainDemo.runtimeconfig.json
+D:\Angular\github\ngAlain\be\bin\Debug\netcoreapp2.2\ngAlainDemo.runtimeconfig.dev.json
+D:\Angular\github\ngAlain\be\bin\Debug\netcoreapp2.2\ngAlainDemo.dll
+D:\Angular\github\ngAlain\be\bin\Debug\netcoreapp2.2\ngAlainDemo.pdb
+D:\Angular\github\ngAlain\be\obj\Debug\netcoreapp2.2\ngAlainDemo.csprojAssemblyReference.cache
+D:\Angular\github\ngAlain\be\obj\Debug\netcoreapp2.2\ngAlainDemo.csproj.CoreCompileInputs.cache
+D:\Angular\github\ngAlain\be\obj\Debug\netcoreapp2.2\ngAlainDemo.RazorAssemblyInfo.cache
+D:\Angular\github\ngAlain\be\obj\Debug\netcoreapp2.2\ngAlainDemo.RazorAssemblyInfo.cs
+D:\Angular\github\ngAlain\be\obj\Debug\netcoreapp2.2\ngAlainDemo.AssemblyInfoInputs.cache
+D:\Angular\github\ngAlain\be\obj\Debug\netcoreapp2.2\ngAlainDemo.AssemblyInfo.cs
+D:\Angular\github\ngAlain\be\obj\Debug\netcoreapp2.2\ngAlainDemo.RazorTargetAssemblyInfo.cache
+D:\Angular\github\ngAlain\be\obj\Debug\netcoreapp2.2\ngAlainDemo.dll
+D:\Angular\github\ngAlain\be\obj\Debug\netcoreapp2.2\ngAlainDemo.pdb
