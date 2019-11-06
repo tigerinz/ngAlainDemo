@@ -42,7 +42,7 @@ export class StartupService {
       // mock：请勿在生产环境中这么使用，viaMock 单纯只是为了模拟一些数据使脚手架一开始能正常运行
      // this.viaMock(resolve, reject);
      this.httpClient
-     .get('app')
+     .post('app',this.settingService.user)
      .pipe(
        catchError((res:any)=>{
          resolve(null);
@@ -58,10 +58,10 @@ export class StartupService {
            // 应用信息：包括站点名、描述、年份
            this.settingService.setApp(app.project);
            // 用户信息：包括姓名、头像、邮箱地址
-           this.settingService.setUser(app.user);
+         //  this.settingService.setUser(app.user);
             // ACL：设置权限为全量
            // this.aclService.
-             this.aclService.setFull(true);
+            // this.aclService.setFull(true);
             // 初始化菜单
            this.menuService.add(app.menu);
            // 设置页面标题的后缀

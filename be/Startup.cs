@@ -68,18 +68,18 @@ app.UseCors(bulider =>
                     if(Context.Request.Headers.TryGetValue("token",out var tokens) && tokens.Count>0){
                         _token=tokens[0];
                     }
-                    Console.WriteLine(_token);
+                   // Console.WriteLine(_token);
                     if(_token != "ngAlainDemo"){
                         Context.Response.StatusCode=401;
                         return;
                     }
 
-                    var user = new User(){
-                        id =1,
-                        name="demo"
-                    };
-                    Context.Items.Add("token",_token);
-                    Context.Items.Add("user",user);
+                    // var user = new User(){
+                    //     id =1,
+                    //     name="demo"
+                    // };
+                      Context.Items.Add("token",_token);
+                    //  Context.Items.Add("user",user);
                 }
                 await next();
             });

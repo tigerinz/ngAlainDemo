@@ -8,14 +8,30 @@ namespace ngAlainDemo.Controllers
     [ApiController]
     public class AppController:ControllerApiBase
     {
-        [HttpGet]
-        public JsonResult Get()
+        [HttpPost]
+        public JsonResult Post(User user)
         {
-            return Output(new App{
-                project= new Project{ name="ngAlainDemo"},
-                menu= new List<Menu> 
+            return getApp(user.name);
+        }
+
+        private JsonResult getApp(string userName)
+        {
+            if(userName=="Demo"){
+            return GetDemo();
+            }else if(userName == "Test"){
+                return GetTest();
+            }
+            return null;
+        }
+
+        private JsonResult GetDemo()
+        {
+            return Output(new App
+            {
+                project = new Project { name = "ngAlainDemo" },
+                menu = new List<Menu>
                 {
-                    new Menu 
+                    new Menu
                     {
                         text="主导航",
                         group=true,
@@ -60,11 +76,76 @@ namespace ngAlainDemo.Controllers
                                 }
                             }
                         }
-                    
+
                     }
 
                 },
-                user = new User{ id = 1, name = "Demo"}
+               // user = new User { id = 1, name = "Demo" }
+            });
+        }
+
+        private JsonResult GetTest()
+        {
+            return Output(new App
+            {
+                project = new Project { name = "ngAlainDemo" },
+                menu = new List<Menu>
+                {
+                    new Menu
+                    {
+                        text="主导航",
+                        group=true,
+                        children= new List<Menu>
+                        {
+                            new Menu
+                            {
+                                text= "仪表盘",
+                                link = "/dashborad",
+                                icon = "anticon action-appstore-o"
+                            },
+                            new Menu
+                            {
+                                text = "快捷菜单",
+                                icon = "acticon acticon-rocket",
+                                shortout_root=true
+                            }
+                        }
+                    },
+                    new Menu
+                    {
+                        text = "业务",
+                        group = true,
+                        children =new List<Menu>
+                        {
+                            new Menu
+                            {
+                                text = "CMS",
+                                icon = "anticon anticon-skin",
+                                children = new List<Menu>
+                                {
+                                    new Menu
+                                    {
+                                        text = "CMS列表",
+                                        link = "/cms/cmslist"
+                                    },
+                                    new Menu
+                                    {
+                                        text = "模块列表",
+                                        link = "cms/modulelist"
+                                    },
+                                       new Menu
+                                    {
+                                        text = "Test",
+                                        link = "Test"
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                },
+                //user = new User { id = 2, name = "Test" }
             });
         }
     }
