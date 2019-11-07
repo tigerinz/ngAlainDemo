@@ -134,6 +134,8 @@ export class UserLoginComponent implements OnDestroy {
         })
            // 用户信息：包括姓名、头像、邮箱地址
            this.settingService.setUser(res.data.user);
+
+           
         // 重新获取 StartupService 内容，我们始终认为应用信息一般都会受当前用户授权范围而影响
         this.startupSrv.load().then(() => {
           let url = this.tokenService.referrer!.url || '/';

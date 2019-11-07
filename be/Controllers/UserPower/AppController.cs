@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using ngAlainDemo.Models;
+using ngAlainDemo.Entities;
 
 namespace ngAlainDemo.Controllers
 {
@@ -80,6 +80,9 @@ namespace ngAlainDemo.Controllers
                     }
 
                 },
+                acl = new Acl{
+                    ability =new string[]{"add"}
+                }
                // user = new User { id = 1, name = "Demo" }
             });
         }
@@ -145,6 +148,9 @@ namespace ngAlainDemo.Controllers
                     }
 
                 },
+                   acl = new Acl{
+                    ability =new string[]{"search"}
+                }
                 //user = new User { id = 2, name = "Test" }
             });
         }

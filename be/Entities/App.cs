@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 
-namespace ngAlainDemo.Models
+namespace ngAlainDemo.Entities
 {
     public class App
     {
         public Project project { get; set; }
         public User user { get; set; }
         public List<Menu> menu { get; set; }
+        public Acl acl {get;set;}
 
         }
 
@@ -24,5 +25,9 @@ namespace ngAlainDemo.Models
             public string icon { get; set; }
             public bool linkExact { get; set; }
             public List<Menu> children { get; set; }
+        }
+
+        public class Acl{
+            public string[] ability { get; set; }
         }
 }

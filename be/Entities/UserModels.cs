@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace ngAlainDemo.Models
+namespace ngAlainDemo.Entities
 {
     
     public class User 

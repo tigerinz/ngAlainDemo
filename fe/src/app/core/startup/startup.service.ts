@@ -51,7 +51,7 @@ export class StartupService {
      )
        .subscribe(
          (res:any)=>{
-           if(res!= null) this.injector.get(NzMessageService).success(JSON.stringify(res));
+          // if(res!= null) this.injector.get(NzMessageService).success(JSON.stringify(res));
            const app:any=res.data;
            console.log(res);
            console.log(app);
@@ -61,7 +61,9 @@ export class StartupService {
          //  this.settingService.setUser(app.user);
             // ACL：设置权限为全量
            // this.aclService.
-            // this.aclService.setFull(true);
+           //  this.aclService.setFull(true);
+          this.aclService.add(app.acl);
+
             // 初始化菜单
            this.menuService.add(app.menu);
            // 设置页面标题的后缀

@@ -1,6 +1,6 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
-using ngAlainDemo.Models;
+using ngAlainDemo.Entities;
 
 namespace ngAlainDemo.Controllers
 {
